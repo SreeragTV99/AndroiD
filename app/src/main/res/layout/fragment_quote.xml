@@ -19,16 +19,16 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/alatsi"
             android:gravity="center"
-            android:text="QUOTE"
-            android:textColor="#67CA03"
-            android:textSize="18sp"
+            android:text="@string/quote_header"
+            android:textColor="@color/quotes_heading"
+            android:textSize="20sp"
             app:layout_constraintTop_toTopOf="parent"/>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#404241"
+            android:background="@color/item_background"
             app:cardCornerRadius="4dp"
             app:cardElevation="3dp"
             app:cardUseCompatPadding="true"
@@ -38,10 +38,10 @@
             android:id="@+id/quotesView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sample Quote!"
+            android:text="@string/sample_quote"
             android:fontFamily="@font/alatsi"
             android:background="#404241"
-            android:textColor="#fff"
+            android:textColor="@color/white"
             android:gravity="center"
             android:padding="8dp" />
         </androidx.cardview.widget.CardView>
@@ -59,7 +59,7 @@
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:background="#404241"
+            android:background="@color/item_background"
             app:layout_constraintTop_toBottomOf="@+id/refreshButton"
             app:layout_constraintBottom_toBottomOf="parent"
             />

@@ -9,7 +9,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#404241"
+        android:background="@color/item_background"
         app:cardCornerRadius="4dp"
         app:cardElevation="3dp"
         app:cardUseCompatPadding="true"
@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="#404241"
+            android:background="@color/item_background"
             tools:ignore="MissingConstraints">
 
             <TextView
@@ -29,8 +29,9 @@
                 android:layout_weight="1"
                 android:text="Type"
                 android:textSize="16sp"
-                android:textColor="#fff"
-                android:padding="8dp"/>
+                android:textColor="@color/white"
+                android:padding="8dp"
+                android:gravity="center"/>
 
         </LinearLayout>
 

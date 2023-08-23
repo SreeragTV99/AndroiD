@@ -4,4 +4,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="app_name_color">#0E9A7F</color>
     <color name="app_background">#323433</color>
+    <color name="item_background">#404241</color>
+    <color name="item_text_color">#E4E4CB</color>
+    <color name="vehicle_type_heading">#40C5BA</color>
+    <color name="quotes_heading">#67CA03</color>
 </resources>

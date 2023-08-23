@@ -9,17 +9,18 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#404241"
+        android:background="@color/item_background"
         app:cardCornerRadius="4dp"
         app:cardElevation="3dp"
         app:cardUseCompatPadding="true"
         tools:ignore="MissingConstraints">
 
         <LinearLayout
+            android:id="@+id/linearvehicle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:background="#404241"
+            android:background="@color/item_background"
             tools:ignore="MissingConstraints">
 
             <TextView
@@ -27,9 +28,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="country"
+                android:text="@string/country_name"
                 android:textSize="16sp"
-                android:textColor="#fff"
+                android:textColor="@color/white"
                 android:padding="8dp"/>
 
             <TextView
@@ -37,9 +38,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Common name"
+                android:text="@string/common_name"
                 android:textSize="16sp"
-                android:textColor="#fff"
+                android:textColor="@color/white"
                 android:padding="8dp"
                 android:gravity="right"/>
         </LinearLayout>
