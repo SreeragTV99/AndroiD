@@ -9,9 +9,13 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.android.R
+import com.example.android.viewModel.MyAdapter
 
 import com.example.android.viewModel.ViewModel1
+import com.example.android.viewModel.ViewModelVehicle
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -25,6 +29,7 @@ private const val ARG_PARAM2 = "param2"
  */
 class QuoteFragment : Fragment() {
     private lateinit var viewModel: ViewModel1
+    private lateinit var viewModelV: ViewModelVehicle
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -50,10 +55,22 @@ class QuoteFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(ViewModel1::class.java)
         val quotesView:TextView = view.findViewById(R.id.quotesView)
         val refreshButton :ImageButton= view.findViewById(R.id.refreshButton)
-        refreshButton.setOnClickListener{viewModel.getData()}
+        refreshButton.setOnClickListener{viewModel.getQuotesData()}
             viewModel.response.observe(viewLifecycleOwner){
                 response->quotesView.text=response[0]
             }
+
+        viewModelV = ViewModelProvider(this).get(ViewModelVehicle::class.java)
+        var recyclerview = view.findViewById<RecyclerView>(R.id.recyclerView)
+        val layoutManager = LinearLayoutManager(requireContext())
+        recyclerview.layoutManager = layoutManager
+        viewModelV.getVehicleData()
+        viewModelV.vehiclelist.observe(viewLifecycleOwner) { result ->
+            var adapter = MyAdapter(result)
+            recyclerview.adapter = adapter
+        }
+
+
     }
 
     companion object {

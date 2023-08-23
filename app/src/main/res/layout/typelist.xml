@@ -18,30 +18,20 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:background="#404241"
             tools:ignore="MissingConstraints">
 
             <TextView
-                android:id="@+id/CountryView"
-                android:layout_width="wrap_content"
+                android:id="@+id/TypeView"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="country"
+                android:text="Type"
                 android:textSize="16sp"
                 android:textColor="#fff"
                 android:padding="8dp"/>
 
-            <TextView
-                android:id="@+id/CommonNameView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Common name"
-                android:textSize="16sp"
-                android:textColor="#fff"
-                android:padding="8dp"
-                android:gravity="right"/>
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>

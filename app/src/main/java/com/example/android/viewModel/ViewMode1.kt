@@ -8,9 +8,9 @@ import kotlinx.coroutines.launch
 class ViewModel1: ViewModel() {
 
     var response = MutableLiveData<List<String>>()
-    var api = RetrofitHelper().getInstance().create(QuotesApi::class.java)
+    var api = RetrofitHelper().getQuotesInstance().create(QuotesApi::class.java)
 
-    fun getData() {
+    fun getQuotesData() {
         try {
             viewModelScope.launch {
                 var res = api.getQuotes()

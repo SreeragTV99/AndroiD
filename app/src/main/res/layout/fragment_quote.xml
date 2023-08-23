@@ -20,28 +20,37 @@
             android:fontFamily="@font/alatsi"
             android:gravity="center"
             android:text="QUOTE"
-            android:textColor="#fff"
+            android:textColor="#67CA03"
             android:textSize="18sp"
             app:layout_constraintTop_toTopOf="parent"/>
 
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#404241"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="3dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintTop_toBottomOf="@+id/quotes"
+            tools:ignore="MissingConstraints">
         <TextView
             android:id="@+id/quotesView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Sample Quote!"
-            app:layout_constraintTop_toBottomOf="@+id/quotes"
             android:fontFamily="@font/alatsi"
             android:background="#404241"
             android:textColor="#fff"
             android:gravity="center"
             android:padding="8dp" />
-        
+        </androidx.cardview.widget.CardView>
         <ImageButton
             android:id="@+id/refreshButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@android:drawable/ic_popup_sync"
-            app:layout_constraintTop_toBottomOf="@+id/quotesView"
+            app:layout_constraintTop_toBottomOf="@+id/cardView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             />

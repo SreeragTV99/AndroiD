@@ -5,6 +5,6 @@ import retrofit2.Response
 import retrofit2.http.GET
 
 interface VehicleApi {
-    @GET("")
+    @GET("/api/vehicles/getallmanufacturers?format=json")
     suspend fun getVehicle() : Response<VehicleList>
 }
