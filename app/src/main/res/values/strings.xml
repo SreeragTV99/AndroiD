@@ -11,4 +11,5 @@
     <string name="vehicle_type_header">VEHICLE TYPE</string>
     <string name="quote_header">QUOTE</string>
     <string name="sample_quote">Sample Quote!</string>
+    <string name="details_header">DETAILS</string>
 </resources>

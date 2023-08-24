@@ -17,12 +17,13 @@
             android:id="@+id/quotes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/alatsi"
+            android:fontFamily="@font/bungee"
             android:gravity="center"
             android:text="@string/quote_header"
             android:textColor="@color/quotes_heading"
             android:textSize="20sp"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="10dp" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
