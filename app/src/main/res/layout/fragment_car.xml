@@ -12,36 +12,25 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        tools:ignore="MissingConstraints">
+        android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/bungee"
-            android:gravity="center"
-            android:padding="8dp"
-            android:text="DETAILS"
-            android:textColor="@color/vehicle_type_heading"
-            android:textSize="18dp"
-            android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="6dp"
-        android:background="@color/country_common_name_header_background">
+        android:background="@color/item_background">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="34dp"
             android:orientation="horizontal"
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="20dp">
 
             <TextView
                 android:id="@+id/country_label"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/country_label"
@@ -50,22 +39,23 @@
 
             <TextView
                 android:id="@+id/CountryView"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="TextView"
                 android:textColor="@color/white"
+                android:gravity="right"
                 android:textSize="16sp"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="34dp"
             android:orientation="horizontal"
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="20dp">
 
             <TextView
                 android:id="@+id/commonName_label"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/common_name_label"
@@ -74,22 +64,23 @@
 
             <TextView
                 android:id="@+id/CommonNameView"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="TextView"
                 android:textColor="@color/white"
+                android:gravity="right"
                 android:textSize="16sp"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="34dp"
             android:orientation="horizontal"
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="20dp">
 
             <TextView
                 android:id="@+id/id_label"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/id_label"
@@ -98,23 +89,23 @@
 
             <TextView
                 android:id="@+id/idView"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="TextView"
                 android:textColor="@color/white"
+                android:gravity="right"
                 android:textSize="16sp"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="38dp"
+            android:layout_height="34dp"
             android:orientation="horizontal"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp">
+            android:layout_marginTop="20dp">
 
             <TextView
                 android:id="@+id/name_label"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Name :"
@@ -123,11 +114,12 @@
 
             <TextView
                 android:id="@+id/NameView"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="TextView"
                 android:textColor="@color/white"
+                android:gravity="right"
                 android:textSize="16sp"/>
         </LinearLayout>
     </LinearLayout>
@@ -136,7 +128,6 @@
             android:id="@+id/type"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/bungee"
             android:gravity="center"
             android:padding="12dp"
             android:text="@string/vehicle_type_header"
