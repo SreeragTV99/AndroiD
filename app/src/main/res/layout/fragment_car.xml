@@ -12,21 +12,30 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DETAILS"
+        android:gravity="center"
+        android:textSize="18dp"
+        android:padding="8dp"
+        android:textColor="@color/vehicle_type_heading"
+        android:textStyle="bold"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="6dp"
-        android:background="@color/item_background">
+        android:background="@color/country_common_name_header_background">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="34dp"
             android:orientation="horizontal"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="16dp">
 
             <TextView
                 android:id="@+id/country_label"
@@ -51,7 +60,7 @@
             android:layout_width="match_parent"
             android:layout_height="34dp"
             android:orientation="horizontal"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="16dp">
 
             <TextView
                 android:id="@+id/commonName_label"
@@ -76,7 +85,7 @@
             android:layout_width="match_parent"
             android:layout_height="34dp"
             android:orientation="horizontal"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="16dp">
 
             <TextView
                 android:id="@+id/id_label"
@@ -99,9 +108,10 @@
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="34dp"
+            android:layout_height="38dp"
             android:orientation="horizontal"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp">
 
             <TextView
                 android:id="@+id/name_label"
