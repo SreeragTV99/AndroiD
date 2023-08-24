@@ -47,9 +47,11 @@
         </androidx.cardview.widget.CardView>
         <ImageButton
             android:id="@+id/refreshButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_popup_sync"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/refresh"
+            android:backgroundTint="#00000000"
             app:layout_constraintTop_toBottomOf="@+id/cardView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
