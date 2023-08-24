@@ -8,4 +8,5 @@
     <color name="item_text_color">#E4E4CB</color>
     <color name="vehicle_type_heading">#40C5BA</color>
     <color name="quotes_heading">#67CA03</color>
+    <color name="country_common_name_header_background">#393A3A</color>
 </resources>

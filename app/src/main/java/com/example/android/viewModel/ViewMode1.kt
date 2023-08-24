@@ -9,7 +9,9 @@ class ViewModel1: ViewModel() {
 
     var response = MutableLiveData<List<String>>()
     var api = RetrofitHelper().getQuotesInstance().create(QuotesApi::class.java)
-
+    init {
+        getQuotesData()
+    }
     fun getQuotesData() {
         try {
             viewModelScope.launch {

@@ -25,7 +25,7 @@
 
             <TextView
                 android:id="@+id/CountryView"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/country_name"
@@ -35,14 +35,13 @@
 
             <TextView
                 android:id="@+id/CommonNameView"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/common_name"
                 android:textSize="16sp"
                 android:textColor="@color/white"
-                android:padding="8dp"
-                android:gravity="right"/>
+                android:padding="8dp"/>
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
