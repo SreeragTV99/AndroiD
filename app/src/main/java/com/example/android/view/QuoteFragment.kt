@@ -29,15 +29,9 @@ class QuoteFragment : Fragment(),MyAdapter.OnItemClickListener{
     private lateinit var viewModel: ViewModel1
     private lateinit var viewModelV: ViewModelVehicle
 
-    private var param1: String? = null
-    private var param2: String? = null
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+
     }
     override fun onItemClick(clickedItem: Vehicles){
         val detailsFragment = CarFragment.newInstance("","")
@@ -79,7 +73,6 @@ class QuoteFragment : Fragment(),MyAdapter.OnItemClickListener{
             var adapter = MyAdapter(result,this)
             recyclerview.adapter = adapter
         }
-
     }
 
     companion object {
