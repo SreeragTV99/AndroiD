@@ -8,7 +8,6 @@
     tools:context=".view.CarFragment"
     android:padding="10dp">
 
-    <!-- TODO: Update blank fragment layout -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,7 +24,7 @@
             android:textColor="@color/vehicle_type_heading"
             android:textSize="18dp"
             android:fontFamily="@font/bungee"
-            android:textStyle="bold" />
+            android:textStyle="bold"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -151,8 +150,7 @@
             android:layout_height="wrap_content"
             android:background="@color/item_background"
             app:layout_constraintTop_toBottomOf="@+id/type"
-            app:layout_constraintBottom_toBottomOf="parent"
-            />
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

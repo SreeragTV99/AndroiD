@@ -3,7 +3,6 @@ package com.example.android.viewModel
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -40,5 +39,4 @@ class MyAdapter(private val VehicleList: List<Vehicles>, val Listner:OnItemClick
     override fun getItemCount(): Int {
         return VehicleList.size
     }
-
 }
