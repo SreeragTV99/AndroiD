@@ -1,3 +1,12 @@
 # AndroiD
  
-# Screenshots![1](https://github.com/SreeragTV99/AndroiD/assets/75733117/6ea63421-facf-458c-b806-ee890fddcef9)![2](https://github.com/SreeragTV99/AndroiD/assets/75733117/11ef55a7-6e76-41a0-95ca-51d3700a723b)![3](https://github.com/SreeragTV99/AndroiD/assets/75733117/f0bb9def-ca6b-4bac-aab5-2ee7f76199c3)
+# Screenshots
+
+Splash Screen
+![1](https://github.com/SreeragTV99/AndroiD/assets/75733117/bb1e3dc8-bfdb-4f71-9f21-0b7797a1b7b6)
+
+First Fragment
+![2](https://github.com/SreeragTV99/AndroiD/assets/75733117/09ef167c-5b25-4ed8-b93f-7b8954785960)
+
+Second Fragment
+![3](https://github.com/SreeragTV99/AndroiD/assets/75733117/4387aa61-18db-4a7e-ad6a-d10651bf4f8d)
