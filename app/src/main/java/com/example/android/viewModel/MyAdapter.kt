@@ -3,6 +3,7 @@ package com.example.android.viewModel
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.android.R
@@ -15,7 +16,7 @@ class MyAdapter(private val vehiclesList: List<Vehicles>, val listener:OnItemCli
     class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val countryTextView : TextView
         val commonNameTextView : TextView
-        val linearLayoutView : TextView
+        val linearLayoutView : LinearLayout
         init {
             view.apply {
                 countryTextView = findViewById(R.id.CountryView)
@@ -36,9 +37,10 @@ class MyAdapter(private val vehiclesList: List<Vehicles>, val listener:OnItemCli
             vehicleItem.apply {
                 countryTextView.text =vehicleItem.Country
                 commonNameTextView.text = Mfr_CommonName
-                linearLayoutView.setOnClickListener{
-                    listener.onItemClick(vehicleItem)
-                }
+
+            }
+            linearLayoutView.setOnClickListener{
+                listener.onItemClick(vehicleItem)
             }
         }
     }
