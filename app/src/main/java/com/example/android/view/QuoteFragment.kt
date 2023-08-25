@@ -57,21 +57,23 @@ class QuoteFragment : Fragment(),MyAdapter.OnItemClickListener{
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this).get(ViewModel1::class.java)
-        val quotesView:TextView = view.findViewById(R.id.quotesView)
-        val refreshButton :ImageButton= view.findViewById(R.id.refreshButton)
-        refreshButton.setOnClickListener{viewModel.getQuotesData()}
-            viewModel.response.observe(viewLifecycleOwner){
-                response->quotesView.text=response
+        view.apply {
+            val quotesView: TextView = findViewById(R.id.quotesView)
+            val refreshButton: ImageButton = findViewById(R.id.refreshButton)
+            refreshButton.setOnClickListener { viewModel.getQuotesData() }
+            viewModel.response.observe(viewLifecycleOwner) { response ->
+                quotesView.text = response
             }
 
-        viewModelV = ViewModelProvider(this).get(ViewModelVehicle::class.java)
-        var recyclerview = view.findViewById<RecyclerView>(R.id.recyclerView)
-        val layoutManager = LinearLayoutManager(requireContext())
-        recyclerview.layoutManager = layoutManager
-        viewModelV.getVehicleData()
-        viewModelV.vehiclelist.observe(viewLifecycleOwner) { result ->
-            var adapter = MyAdapter(result,this)
-            recyclerview.adapter = adapter
+            viewModelV = ViewModelProvider(this@QuoteFragment).get(ViewModelVehicle::class.java)
+            val recyclerview: RecyclerView = findViewById(R.id.recyclerView)
+            val layoutManager = LinearLayoutManager(requireContext())
+            recyclerview.layoutManager = layoutManager
+            viewModelV.getVehicleData()
+            viewModelV.vehiclelist.observe(viewLifecycleOwner) { result ->
+                val adapter = MyAdapter(result, this@QuoteFragment)
+                recyclerview.adapter = adapter
+            }
         }
     }
 
