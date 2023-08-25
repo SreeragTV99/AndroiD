@@ -36,7 +36,7 @@ class QuoteFragment : Fragment(),MyAdapter.OnItemClickListener{
     override fun onItemClick(clickedItem: Vehicles){
         val detailsFragment = CarFragment.newInstance("","")
         var args = Bundle()
-        args?.apply {
+        args.apply {
             putParcelable(Constants.COUNTRY_KEY,clickedItem)
         }
         detailsFragment.arguments = args
