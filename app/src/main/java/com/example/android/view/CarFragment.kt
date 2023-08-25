@@ -48,15 +48,16 @@ class CarFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val recievedData = arguments?.getParcelable<Vehicles>(Constants.COUNTRY_KEY)
-        common_name.text = recievedData?.Mfr_CommonName
-        name.text = recievedData?.Mfr_Name
-        country_name.text = recievedData?.Country
-        ID.text = recievedData?.Mfr_ID.toString()
+        arguments?.getParcelable<Vehicles>(Constants.COUNTRY_KEY)?.let { recievedData ->
+            common_name.text = recievedData.Mfr_CommonName
+            name.text = recievedData.Mfr_Name
+            country_name.text = recievedData.Country
+            ID.text = recievedData.Mfr_ID.toString()
 
-        recyclerView.layoutManager=LinearLayoutManager(requireContext())
-        val adapter= recievedData?.VehicleTypes?.let { AdapterType(it) }
-        recyclerView.adapter=adapter
+            recyclerView.layoutManager = LinearLayoutManager(requireContext())
+            val adapter = recievedData?.VehicleTypes?.let { AdapterType(it) }
+            recyclerView.adapter = adapter
+        }
     }
 
     companion object {
