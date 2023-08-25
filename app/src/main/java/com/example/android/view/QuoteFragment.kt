@@ -74,7 +74,7 @@ class QuoteFragment : Fragment(),MyAdapter.OnItemClickListener{
         val refreshButton :ImageButton= view.findViewById(R.id.refreshButton)
         refreshButton.setOnClickListener{viewModel.getQuotesData()}
             viewModel.response.observe(viewLifecycleOwner){
-                response->quotesView.text=response[0]
+                response->quotesView.text=response
             }
 
         viewModelV = ViewModelProvider(this).get(ViewModelVehicle::class.java)

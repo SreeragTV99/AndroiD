@@ -7,7 +7,7 @@ import kotlinx.coroutines.launch
 
 class ViewModel1: ViewModel() {
 
-    var response = MutableLiveData<List<String>>()
+    var response = MutableLiveData<String>()
     var api = RetrofitHelper().getQuotesInstance().create(QuotesApi::class.java)
     init {
         getQuotesData()
@@ -16,7 +16,7 @@ class ViewModel1: ViewModel() {
         try {
             viewModelScope.launch {
                 var res = api.getQuotes()
-                response.value = res.body()
+                response.value = res.body()?.first()
             }
         } catch (e: Exception) {
             println(e.message)
