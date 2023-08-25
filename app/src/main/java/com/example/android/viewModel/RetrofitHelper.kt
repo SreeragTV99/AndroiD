@@ -10,4 +10,9 @@ class RetrofitHelper {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
+    fun getVehicleInstance(): Retrofit {
+        return Retrofit.Builder().baseUrl(Constants.BASE_URL_CARS)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+    }
 }

@@ -10,7 +10,7 @@ import kotlinx.coroutines.launch
 class ViewModelVehicle: ViewModel() {
 
     var vehiclelist = MutableLiveData<List<Vehicles>>()
-    var vehicleapi = VehicleRetrofitHelper().getVehicleInstance().create(VehicleApi::class.java)
+    var vehicleapi = RetrofitHelper().getVehicleInstance().create(VehicleApi::class.java)
 
     fun getVehicleData() {
         try {
