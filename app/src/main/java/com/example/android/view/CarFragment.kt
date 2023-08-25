@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.android.Constants.Constants
 import com.example.android.R
 import com.example.android.model.Vehicles
 import com.example.android.viewModel.AdapterType
@@ -47,7 +48,7 @@ class CarFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val recievedData = arguments?.getParcelable<Vehicles>("country")
+        val recievedData = arguments?.getParcelable<Vehicles>(Constants.COUNTRY_KEY)
         common_name.text = recievedData?.Mfr_CommonName
         name.text = recievedData?.Mfr_Name
         country_name.text = recievedData?.Country

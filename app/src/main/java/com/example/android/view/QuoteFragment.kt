@@ -14,6 +14,7 @@ import android.widget.TextView
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.android.Constants.Constants
 import com.example.android.R
 import com.example.android.model.Vehicles
 import com.example.android.viewModel.MyAdapter
@@ -42,7 +43,7 @@ class QuoteFragment : Fragment(),MyAdapter.OnItemClickListener{
         val detailsFragment = CarFragment.newInstance("","")
         var args = Bundle()
         args?.apply {
-            putParcelable("country",clickedItem)
+            putParcelable(Constants.COUNTRY_KEY,clickedItem)
         }
         detailsFragment.arguments = args
         parentFragmentManager
