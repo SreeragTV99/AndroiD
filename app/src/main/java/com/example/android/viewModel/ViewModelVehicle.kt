@@ -12,13 +12,9 @@ class ViewModelVehicle: ViewModel() {
     private var vehicleApi = RetrofitHelper().getVehicleInstance().create(VehicleApi::class.java)
 
     fun getVehicleData() {
-        try {
-            viewModelScope.launch {
-                var res = vehicleApi.getVehicle()
-                vehicleList.value = res.body()?.Results
-            }
-        } catch (e: Exception) {
-            println(e.message)
+        viewModelScope.launch {
+            var res = vehicleApi.getVehicle()
+            vehicleList.value = res.body()?.Results
         }
     }
 }

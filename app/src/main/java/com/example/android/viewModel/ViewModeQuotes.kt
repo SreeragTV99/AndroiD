@@ -13,14 +13,9 @@ class ViewModelQuotes: ViewModel() {
         getQuotesData()
     }
     fun getQuotesData() {
-
-        try {
-            viewModelScope.launch {
-                var res = api.getQuotes()
-                response.value = res.body()?.first()
-            }
-        } catch (e: Exception) {
-            println(e.message)
+        viewModelScope.launch {
+            var res = api.getQuotes()
+            response.value = res.body()?.first()
         }
     }
 }
