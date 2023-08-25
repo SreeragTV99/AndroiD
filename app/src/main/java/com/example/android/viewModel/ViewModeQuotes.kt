@@ -7,14 +7,12 @@ import kotlinx.coroutines.launch
 
 class ViewModelQuotes: ViewModel() {
 
-    var response = MutableLiveData<String>()
-    var api = RetrofitHelper().getQuotesInstance().create(QuotesApi::class.java)
-    init {
-        getQuotesData()
-    }
+    val response = MutableLiveData<String>()
+    val api = RetrofitHelper().getQuotesInstance().create(QuotesApi::class.java)
+
     fun getQuotesData() {
         viewModelScope.launch {
-            var res = api.getQuotes()
+            val res = api.getQuotes()
             response.value = res.body()?.first()
         }
     }

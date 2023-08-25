@@ -30,7 +30,7 @@ class QuoteFragment : Fragment(),MyAdapter.OnItemClickListener{
     }
     override fun onItemClick(clickedItem: Vehicles){
         val detailsFragment = CarFragment.newInstance("","")
-        var args = Bundle()
+        val args = Bundle()
         args.apply {
             putParcelable(Constants.COUNTRY_KEY,clickedItem)
         }
@@ -52,6 +52,7 @@ class QuoteFragment : Fragment(),MyAdapter.OnItemClickListener{
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModelQuotes = ViewModelProvider(this).get(ViewModelQuotes::class.java)
+        viewModelQuotes.getQuotesData()
         view.apply {
             val quotesView: TextView = findViewById(R.id.quotesView)
             val refreshButton: ImageButton = findViewById(R.id.refreshButton)
