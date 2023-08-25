@@ -1,15 +1,11 @@
 package com.example.android.view
 
 import android.os.Bundle
-import android.provider.ContactsContract
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
-import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Adapter
 import android.widget.ImageButton
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -70,7 +66,7 @@ class QuoteFragment : Fragment(),MyAdapter.OnItemClickListener{
             val layoutManager = LinearLayoutManager(requireContext())
             recyclerview.layoutManager = layoutManager
             viewModelV.getVehicleData()
-            viewModelV.vehiclelist.observe(viewLifecycleOwner) { result ->
+            viewModelV.vehicleList.observe(viewLifecycleOwner) { result ->
                 val adapter = MyAdapter(result, this@QuoteFragment)
                 recyclerview.adapter = adapter
             }

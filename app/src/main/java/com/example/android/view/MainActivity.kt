@@ -9,10 +9,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val quotfrag = QuoteFragment.newInstance("","")
+        val quotFragment = QuoteFragment.newInstance("","")
         supportFragmentManager
             .beginTransaction()
             .addToBackStack(null)
-            .replace(R.id.container1, quotfrag, "quoteFragment").commit()
+            .replace(R.id.container1, quotFragment, "quoteFragment").commit()
     }
 }

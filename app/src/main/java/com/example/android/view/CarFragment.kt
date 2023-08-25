@@ -18,9 +18,9 @@ private const val ARG_PARAM2 = "param2"
 
 class CarFragment : Fragment() {
 
-    lateinit var country_name: TextView
-    lateinit var common_name: TextView
-    lateinit var ID: TextView
+    lateinit var countryName: TextView
+    lateinit var commonName: TextView
+    lateinit var vehicleId: TextView
     lateinit var name: TextView
     lateinit var recyclerView: RecyclerView
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,9 +33,9 @@ class CarFragment : Fragment() {
     ): View? {
         val inflatedView =  inflater.inflate(R.layout.fragment_car, container, false)
             with(inflatedView){
-                country_name = findViewById(R.id.CountryView)
-                common_name = findViewById(R.id.CommonNameView)
-                ID = findViewById(R.id.idView)
+                countryName = findViewById(R.id.CountryView)
+                commonName = findViewById(R.id.CommonNameView)
+                vehicleId = findViewById(R.id.idView)
                 name = findViewById(R.id.NameView)
                 recyclerView=findViewById(R.id.recyclerViewType)
         }
@@ -45,10 +45,10 @@ class CarFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         arguments?.getParcelable<Vehicles>(Constants.COUNTRY_KEY)?.let { recievedData ->
-            common_name.text = recievedData.Mfr_CommonName
+            commonName.text = recievedData.Mfr_CommonName
             name.text = recievedData.Mfr_Name
-            country_name.text = recievedData.Country
-            ID.text = recievedData.Mfr_ID.toString()
+            countryName.text = recievedData.Country
+            vehicleId.text = recievedData.Mfr_ID.toString()
 
             recyclerView.layoutManager = LinearLayoutManager(requireContext())
             val adapter = recievedData?.VehicleTypes?.let { AdapterType(it) }

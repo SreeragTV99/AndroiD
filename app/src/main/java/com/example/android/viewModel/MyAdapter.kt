@@ -9,12 +9,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.android.R
 import com.example.android.model.Vehicles
 
-class MyAdapter(private val VehicleList: List<Vehicles>, val Listner:OnItemClickListener):
+class MyAdapter(private val vehiclesList: List<Vehicles>, val listener:OnItemClickListener):
     RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
     class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val country = view.findViewById<TextView>(R.id.CountryView)
-        val common_name = view.findViewById<TextView>(R.id.CommonNameView)
+        val commonName = view.findViewById<TextView>(R.id.CommonNameView)
         val linear = view.findViewById<LinearLayout>(R.id.linearvehicle)
     }
 
@@ -24,11 +24,11 @@ class MyAdapter(private val VehicleList: List<Vehicles>, val Listner:OnItemClick
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        val vehicleItem = VehicleList[position]
+        val vehicleItem = vehiclesList[position]
         holder.country.text = vehicleItem.Country
-        holder.common_name.text = vehicleItem.Mfr_CommonName
+        holder.commonName.text = vehicleItem.Mfr_CommonName
         holder.linear.setOnClickListener{
-            Listner.onItemClick(vehicleItem)
+            listener.onItemClick(vehicleItem)
         }
     }
 
@@ -37,6 +37,6 @@ class MyAdapter(private val VehicleList: List<Vehicles>, val Listner:OnItemClick
     }
 
     override fun getItemCount(): Int {
-        return VehicleList.size
+        return vehiclesList.size
     }
 }
