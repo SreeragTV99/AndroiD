@@ -46,7 +46,7 @@ class MyAdapter(private val vehiclesList: List<Vehicles>, val listener:OnItemCli
     }
 
     interface OnItemClickListener {
-        fun onItemClick(item: Vehicles)
+        fun onItemClick(clickedItem: Vehicles)
     }
 
     override fun getItemCount(): Int {
