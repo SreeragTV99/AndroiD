@@ -12,7 +12,7 @@ class AdapterType(private val typeList: List<Types>):
 
     RecyclerView.Adapter<AdapterType.MyViewHolder>() {
     class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val vehicle_type = view.findViewById<TextView>(R.id.TypeView)
+        val vehicleType = view.findViewById<TextView>(R.id.TypeView)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -22,7 +22,7 @@ class AdapterType(private val typeList: List<Types>):
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val type = typeList[position]
-        holder.vehicle_type.text = type.Name
+        holder.vehicleType.text = type.Name
     }
 
     override fun getItemCount(): Int {
