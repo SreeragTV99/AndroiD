@@ -71,7 +71,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:background="@color/item_background"
+                android:background="@color/item_background_dark"
                 tools:ignore="MissingConstraints">
 
                 <TextView
@@ -79,20 +79,22 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:padding="@dimen/spacing_8dp"
                     android:text="@string/country_name"
-                    android:textSize="16sp"
                     android:textColor="@color/quotes_heading"
-                    android:padding="@dimen/spacing_8dp"/>
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/CommonNameView"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:padding="@dimen/spacing_8dp"
                     android:text="@string/common_name"
-                    android:textSize="16sp"
                     android:textColor="@color/quotes_heading"
-                    android:padding="@dimen/spacing_8dp"/>
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
