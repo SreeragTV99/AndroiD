@@ -14,15 +14,14 @@ import com.example.android.Constants.Constants
 import com.example.android.R
 import com.example.android.model.Vehicles
 import com.example.android.viewModel.MyAdapter
-
-import com.example.android.viewModel.ViewModel1
+import com.example.android.viewModel.ViewModelQuotes
 import com.example.android.viewModel.ViewModelVehicle
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 class QuoteFragment : Fragment(),MyAdapter.OnItemClickListener{
-    private lateinit var viewModel: ViewModel1
+    private lateinit var viewModelQuotes: ViewModelQuotes
     private lateinit var viewModelV: ViewModelVehicle
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,12 +51,12 @@ class QuoteFragment : Fragment(),MyAdapter.OnItemClickListener{
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel = ViewModelProvider(this).get(ViewModel1::class.java)
+        viewModelQuotes = ViewModelProvider(this).get(ViewModelQuotes::class.java)
         view.apply {
             val quotesView: TextView = findViewById(R.id.quotesView)
             val refreshButton: ImageButton = findViewById(R.id.refreshButton)
-            refreshButton.setOnClickListener { viewModel.getQuotesData() }
-            viewModel.response.observe(viewLifecycleOwner) { response ->
+            refreshButton.setOnClickListener { viewModelQuotes.getQuotesData() }
+            viewModelQuotes.response.observe(viewLifecycleOwner) { response ->
                 quotesView.text = response
             }
 

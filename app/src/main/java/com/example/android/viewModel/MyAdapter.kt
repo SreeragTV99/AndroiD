@@ -13,9 +13,9 @@ class MyAdapter(private val vehiclesList: List<Vehicles>, val listener:OnItemCli
     RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
     class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val country = view.findViewById<TextView>(R.id.CountryView)
-        val commonName = view.findViewById<TextView>(R.id.CommonNameView)
-        val linear = view.findViewById<LinearLayout>(R.id.linearvehicle)
+        val countryTextView = view.findViewById<TextView>(R.id.CountryView)
+        val commonNameTextView = view.findViewById<TextView>(R.id.CommonNameView)
+        val linearLayoutView = view.findViewById<LinearLayout>(R.id.linearvehicle)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -25,11 +25,12 @@ class MyAdapter(private val vehiclesList: List<Vehicles>, val listener:OnItemCli
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val vehicleItem = vehiclesList[position]
-        holder.country.text = vehicleItem.Country
-        holder.commonName.text = vehicleItem.Mfr_CommonName
-        holder.linear.setOnClickListener{
+        holder.countryTextView.text = vehicleItem.Country
+        holder.commonNameTextView.text = vehicleItem.Mfr_CommonName
+        holder.linearLayoutView.setOnClickListener{
             listener.onItemClick(vehicleItem)
         }
+
     }
 
     interface OnItemClickListener {

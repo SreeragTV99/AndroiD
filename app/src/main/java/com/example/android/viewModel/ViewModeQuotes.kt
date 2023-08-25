@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 
-class ViewModel1: ViewModel() {
+class ViewModelQuotes: ViewModel() {
 
     var response = MutableLiveData<String>()
     var api = RetrofitHelper().getQuotesInstance().create(QuotesApi::class.java)
@@ -13,6 +13,7 @@ class ViewModel1: ViewModel() {
         getQuotesData()
     }
     fun getQuotesData() {
+
         try {
             viewModelScope.launch {
                 var res = api.getQuotes()
