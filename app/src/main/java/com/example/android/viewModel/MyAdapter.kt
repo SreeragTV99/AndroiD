@@ -35,7 +35,7 @@ class MyAdapter(private val vehiclesList: List<Vehicles>, val listener:OnItemCli
         val vehicleItem = vehiclesList[position]
         holder.apply {
             vehicleItem.apply {
-                countryTextView.text =vehicleItem.Country
+                countryTextView.text = Country
                 commonNameTextView.text = Mfr_CommonName
             }
             linearLayoutView.setOnClickListener{
