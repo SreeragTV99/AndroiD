@@ -15,4 +15,9 @@ class RetrofitHelper {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
+    fun getUsersInstance(): Retrofit {
+        return Retrofit.Builder().baseUrl(Constants.BASE_URL_USERS)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+    }
 }

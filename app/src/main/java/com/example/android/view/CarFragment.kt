@@ -13,9 +13,6 @@ import com.example.android.R
 import com.example.android.model.Vehicles
 import com.example.android.viewModel.AdapterType
 
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
 class CarFragment : Fragment() {
 
     lateinit var countryName: TextView
@@ -31,7 +28,7 @@ class CarFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val inflatedView =  inflater.inflate(R.layout.fragment_car, container, false)
+        val inflatedView = inflater.inflate(R.layout.fragment_car, container, false)
             with(inflatedView){
                 countryName = findViewById(R.id.CountryView)
                 commonName = findViewById(R.id.CommonNameView)
@@ -58,12 +55,6 @@ class CarFragment : Fragment() {
 
     companion object {
         @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            CarFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+        fun newInstance() = CarFragment()
     }
 }

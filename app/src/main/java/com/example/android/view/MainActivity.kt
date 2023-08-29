@@ -9,7 +9,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val quotFragment = QuoteFragment.newInstance("","")
+        val quotFragment = QuoteFragment.newInstance()
         supportFragmentManager
             .beginTransaction()
             .addToBackStack(null)

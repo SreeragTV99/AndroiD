@@ -17,9 +17,6 @@ import com.example.android.viewModel.MyAdapter
 import com.example.android.viewModel.ViewModelQuotes
 import com.example.android.viewModel.ViewModelVehicle
 
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
 class QuoteFragment : Fragment(),MyAdapter.OnItemClickListener{
     private lateinit var viewModelQuotes: ViewModelQuotes
     private lateinit var viewModelV: ViewModelVehicle
@@ -29,7 +26,7 @@ class QuoteFragment : Fragment(),MyAdapter.OnItemClickListener{
 
     }
     override fun onItemClick(clickedItem: Vehicles){
-        val detailsFragment = CarFragment.newInstance("","")
+        val detailsFragment = CarFragment.newInstance()
         val args = Bundle()
         args.apply {
             putParcelable(Constants.COUNTRY_KEY,clickedItem)
@@ -75,12 +72,6 @@ class QuoteFragment : Fragment(),MyAdapter.OnItemClickListener{
 
     companion object {
         @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            QuoteFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+        fun newInstance() = QuoteFragment()
     }
 }
