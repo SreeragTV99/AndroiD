@@ -12,7 +12,7 @@
     <string name="quote_header">QUOTE</string>
     <string name="sample_quote">Sample Quote!</string>
     <string name="details_header">DETAILS</string>
-    <string name="login_toolbar_text">LOGIN</string>
+    <string name="login_toolbar_text">AndroiD</string>
     <string name="login_header">SIGN IN</string>
     <string name="username_hint">UserName</string>
     <string name="password_hint">Password</string>
