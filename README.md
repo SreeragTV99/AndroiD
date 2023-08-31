@@ -4,24 +4,24 @@
 
 1.Splash Screen
 
-![1-min](https://github.com/SreeragTV99/AndroiD/assets/75733117/f6a7d970-1d4f-4962-84ad-0d3e91049375)
+![1](https://github.com/SreeragTV99/AndroiD/assets/75733117/70a2a8f6-03f2-4c90-8502-66d2c4336dd8)
 
 2.login Fragment
 
-![2-min](https://github.com/SreeragTV99/AndroiD/assets/75733117/35b61d09-53dc-4989-a47f-531e5c15345d)
+![2](https://github.com/SreeragTV99/AndroiD/assets/75733117/d3755a49-385f-4e35-8d1e-ec36eeeb958b)
 
 3.Login with empty fields
 
-![3-min](https://github.com/SreeragTV99/AndroiD/assets/75733117/be6385fe-456d-446b-a117-8d6bf78f148e)
+![3](https://github.com/SreeragTV99/AndroiD/assets/75733117/f981b46e-4cd8-4170-9878-92f55a42609d)
 
 4.Login with invalid credentials
 
-![4-min](https://github.com/SreeragTV99/AndroiD/assets/75733117/121966d1-c5fc-4368-bbfd-896011239d0a)
+![4](https://github.com/SreeragTV99/AndroiD/assets/75733117/65396581-e451-4850-94f0-1d6bd94ded7e)
 
 5.First Fragment
 
-![5-min](https://github.com/SreeragTV99/AndroiD/assets/75733117/711daa68-3e31-41c4-9516-1a47f1d2a5b1)
+![5](https://github.com/SreeragTV99/AndroiD/assets/75733117/1bc0f1e6-b2dd-4f9c-8af2-d79d7f3ed8f4)
 
 6.Second Fragment
 
-![6-min](https://github.com/SreeragTV99/AndroiD/assets/75733117/7e0e7502-f836-43f5-b8a9-0cf193619385)
+![6](https://github.com/SreeragTV99/AndroiD/assets/75733117/2b4f7d3c-51e5-402e-84e4-33ffc7c70666)
