@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.android.R
@@ -55,6 +56,7 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val user = retriveSharedpreferencesData()
+        val backButton: ImageButton = view.findViewById(R.id.backButton)
         if (user!=null){
             image.setImage(user.image)
             uid.text = user.id.toString()
@@ -63,6 +65,11 @@ class ProfileFragment : Fragment() {
             lastName.text =  user.lastName
             gender.text = user.gender
             email.text = user.email
+        }
+        backButton.setOnClickListener{
+            val quoteFragment = QuoteFragment()
+            val fragmentManager = requireActivity().supportFragmentManager
+            fragmentManager.beginTransaction().replace(R.id.container1, quoteFragment).commit()
         }
     }
     fun retriveSharedpreferencesData():LoginRes{

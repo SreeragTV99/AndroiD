@@ -7,13 +7,23 @@
     android:orientation="vertical"
     android:background="@color/app_background"
     tools:context=".view.ProfileFragment">
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/backwhite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        android:scaleType="fitCenter"
+        android:backgroundTint="#00000000"/>
     <androidx.cardview.widget.CardView
         android:layout_width="100dp"
         android:layout_height="100dp"
         app:cardCornerRadius="50dp"
         app:cardElevation="4dp"
-        android:layout_margin="@dimen/spacing_24dp"
-        android:layout_gravity="center_horizontal">
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/spacing_16dp">
     <ImageView
         android:id="@+id/profileImage"
         android:layout_width="100dp"
@@ -22,6 +32,7 @@
         android:layout_gravity="center_horizontal"
         android:background="#3F3F43"/>
     </androidx.cardview.widget.CardView>
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
