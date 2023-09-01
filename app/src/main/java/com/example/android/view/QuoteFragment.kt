@@ -53,6 +53,8 @@ class QuoteFragment : Fragment(),MyAdapter.OnItemClickListener{
         view.apply {
             val quotesView: TextView = findViewById(R.id.quotesView)
             val refreshButton: ImageButton = findViewById(R.id.refreshButton)
+            val backButton: ImageButton = findViewById(R.id.backButton)
+            val profileButton:ImageButton = findViewById(R.id.profileButton)
             refreshButton.setOnClickListener { viewModelQuotes.getQuotesData() }
             viewModelQuotes.response.observe(viewLifecycleOwner) { response ->
                 quotesView.text = response
@@ -66,6 +68,15 @@ class QuoteFragment : Fragment(),MyAdapter.OnItemClickListener{
             viewModelV.vehicleList.observe(viewLifecycleOwner) { result ->
                 val adapter = MyAdapter(result, this@QuoteFragment)
                 recyclerview.adapter = adapter
+            }
+            backButton.setOnClickListener{
+                val loginFragment = LoginFragment()
+                val fragmentManager = requireActivity().supportFragmentManager
+                fragmentManager.beginTransaction().replace(R.id.container1, loginFragment).commit()
+            }
+            profileButton.setOnClickListener{
+                val profileFragment = ProfileFragment()
+                requireActivity().supportFragmentManager.beginTransaction().replace(R.id.container1, profileFragment).commit()
             }
         }
     }
