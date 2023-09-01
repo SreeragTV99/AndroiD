@@ -25,22 +25,23 @@
 
         <ImageButton
             android:id="@+id/backButton"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:src="@drawable/backwhite"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/cardView"
             android:scaleType="fitCenter"
             android:backgroundTint="#00000000"/>
         <ImageButton
             android:id="@+id/profileButton"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:src="@drawable/profilewhite"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/cardView"
-            android:scaleType="fitCenter"
             app:layout_constraintEnd_toEndOf="parent"
+            android:scaleType="fitCenter"
             android:backgroundTint="#00000000"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"

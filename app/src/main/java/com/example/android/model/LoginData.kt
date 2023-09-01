@@ -11,5 +11,10 @@ data class LoginRequest(
 data class LoginRes(
     var id:Int,
     var username:String,
-    var message:String
+    var message:String,
+    var firstName:String,
+    var lastName:String,
+    var gender:String,
+    var email:String,
+    var image:String
 )

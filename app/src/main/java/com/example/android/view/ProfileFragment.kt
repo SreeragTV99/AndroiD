@@ -1,11 +1,17 @@
 package com.example.android.view
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import com.example.android.R
+import com.example.android.model.LoginRes
+import com.example.android.model.setImage
+import com.google.gson.Gson
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -21,6 +27,14 @@ class ProfileFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    lateinit var image:ImageView
+    lateinit var uid:TextView
+    lateinit var username:TextView
+    lateinit var firstName: TextView
+    lateinit var lastName:TextView
+    lateinit var gender:TextView
+    lateinit var email:TextView
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,10 +48,38 @@ class ProfileFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false)
+        val inflatedView = inflater.inflate(R.layout.fragment_profile, container, false)
+        with(inflatedView){
+            image = findViewById(R.id.profileImage)
+            uid = findViewById(R.id.idView)
+            username = findViewById(R.id.usernameView)
+            firstName = findViewById(R.id.firstnameView)
+            lastName = findViewById(R.id.lastnameView)
+            gender = findViewById(R.id.genderView)
+            email = findViewById(R.id.emailView)
+        }
+        return inflatedView
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val user = retriveSharedpreferencesData()
+        if (user!=null){
+            image.setImage(user.image)
+            uid.text = user.id.toString()
+            username.text = user.username
+            firstName.text = user.firstName
+            lastName.text =  user.lastName
+            gender.text = user.gender
+            email.text = user.email
+        }
+    }
+    fun retriveSharedpreferencesData():LoginRes{
+        val sharedpreferences = requireContext().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+        val jsonData = sharedpreferences.getString("shared_data", null)
+        val userData= Gson().fromJson(jsonData, LoginRes::class.java)
+        return userData
+    }
     companion object {
         /**
          * Use this factory method to create a new instance of

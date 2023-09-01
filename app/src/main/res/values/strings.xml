@@ -15,4 +15,11 @@
     <string name="username_hint">UserName</string>
     <string name="password_hint">Password</string>
     <string name="login_button_text">Login</string>
+    <string name="firstname_label">First Name</string>
+    <string name="lastname_label">Last Name</string>
+    <string name="age_label">Age</string>
+    <string name="gender_label">Gender</string>
+    <string name="email_label">Email</string>
+    <string name="uid_label">Id</string>
+    <string name="user_name_label">User Name</string>
 </resources>
