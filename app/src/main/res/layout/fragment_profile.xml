@@ -61,7 +61,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/uid_label"
-                android:textColor="@color/item_text_color"
+                android:textStyle="bold"
+                android:textColor="@color/profile_labels_text_color"
                 android:textSize="16sp"/>
 
             <TextView
@@ -86,7 +87,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/user_name_label"
-                android:textColor="@color/item_text_color"
+                android:textStyle="bold"
+                android:textColor="@color/profile_labels_text_color"
                 android:textSize="16sp"/>
 
             <TextView
@@ -110,7 +112,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/firstname_label"
-                android:textColor="@color/item_text_color"
+                android:textStyle="bold"
+                android:textColor="@color/profile_labels_text_color"
                 android:textSize="16sp"/>
 
             <TextView
@@ -133,7 +136,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/lastname_label"
-                android:textColor="@color/item_text_color"
+                android:textStyle="bold"
+                android:textColor="@color/profile_labels_text_color"
                 android:textSize="16sp"/>
 
             <TextView
@@ -157,7 +161,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/email_label"
-                android:textColor="@color/item_text_color"
+                android:textStyle="bold"
+                android:textColor="@color/profile_labels_text_color"
                 android:textSize="16sp"/>
 
             <TextView
@@ -181,7 +186,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/gender_label"
-                android:textColor="@color/item_text_color"
+                android:textStyle="bold"
+                android:textColor="@color/profile_labels_text_color"
                 android:textSize="16sp"/>
 
             <TextView

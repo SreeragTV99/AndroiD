@@ -13,4 +13,5 @@
     <color name="login_toolbar_background">#1A5487</color>
     <color name="hint_text_color">#676666</color>
     <color name="login_button_background">#2A6395</color>
+    <color name="profile_labels_text_color">#6896BA</color>
 </resources>
